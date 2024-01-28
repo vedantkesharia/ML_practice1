@@ -10,6 +10,7 @@ import cv2 as cv
 # Reading Videos
 capture = cv.VideoCapture('../Resources/Videos/dog.mp4') #(use number 0 in bracket like cv.VideoCapture(0) if you want to use webcam)
 
+
 #we read a video frame by frame by using a loop
 while True:
     isTrue, frame = capture.read()
