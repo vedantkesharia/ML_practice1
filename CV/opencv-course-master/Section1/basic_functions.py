@@ -11,12 +11,22 @@ cv.imshow('Park', img)
 # cv.imshow('Gray', gray)
 
 # # Blur 
-# blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT)
+# blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT) 
 # cv.imshow('Blur', blur)
 
-# # Edge Cascade
-# canny = cv.Canny(blur, 125, 175)
+#(image,kernel_size(has to be an odd number so we take 7,7, higher the number more the blur),cv.BORDER_DEFAULT)
+
+
+# # Edge Cascade -> trying to find the edges that are present in the image
+
+# canny = cv.Canny(img, 125, 175) #(image,threholds)
 # cv.imshow('Canny Edges', canny)
+
+#we can reduce the number of edges by applying it on blurred image
+
+# canny = cv.Canny(blur, 125, 175) #(image,threholds)
+# cv.imshow('Canny Edges', canny)
+
 
 # # Dilating the image
 # dilated = cv.dilate(canny, (7,7), iterations=3)
@@ -33,3 +43,5 @@ cv.imshow('Park', img)
 # # Cropping
 # cropped = img[50:200, 200:400]
 # cv.imshow('Cropped', cropped)
+
+cv.waitKey(0)

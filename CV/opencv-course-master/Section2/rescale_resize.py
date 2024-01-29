@@ -6,8 +6,8 @@ import cv2 as cv
 # cv.imshow('Cat', img)
 
 
-
-def rescaleFrame(frame, scale=0.75):
+#to refscale a video scale or image
+def rescaleFrame(frame, scale=0.75): #by default setting scale to 0.75
     # Images, Videos and Live Video
     width = int(frame.shape[1] * scale)
     height = int(frame.shape[0] * scale)
@@ -27,7 +27,7 @@ capture = cv.VideoCapture('../Resources/Videos/dog.mp4')
 while True:
     isTrue, frame = capture.read()
 
-    frame_resized = rescaleFrame(frame, scale=.2)
+    frame_resized = rescaleFrame(frame, scale=.2) #rescaling to 20%
     
     cv.imshow('Video', frame)
     cv.imshow('Video Resized', frame_resized)
