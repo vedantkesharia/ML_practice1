@@ -4,6 +4,8 @@ import os
 import cv2 as cv
 import numpy as np
 
+
+
 people = ['Ben Afflek', 'Elton John', 'Jerry Seinfield', 'Madonna', 'Mindy Kaling']
 DIR = r'../Resources\Faces\train'
 
