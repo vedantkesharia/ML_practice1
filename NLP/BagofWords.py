@@ -22,8 +22,9 @@ for i in range(len(sentences)):
     corpus.append(review)
 
 print(corpus)
+
 #Creating Bag of Words model
 from sklearn.feature_extraction.text import CountVectorizer
-cv = CountVectorizer(max_features = 1500)
+cv = CountVectorizer()
 X = cv.fit_transform(corpus).toarray()
 print(X)
