@@ -28,3 +28,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 cv = CountVectorizer()
 X = cv.fit_transform(corpus).toarray()
 print(X)
+
+
+#X = cv.fit_transform(corpus).toarray(): This line performs the feature extraction process. It takes the corpus (a collection of text documents) and transforms it into a matrix of token counts. fit_transform() is a method of the CountVectorizer class, which learns the vocabulary dictionary and returns a document-term matrix. .toarray() converts the sparse matrix representation into a dense NumPy array. The resulting matrix X contains the token counts, where each row represents a document in the corpus and each column represents a unique token (word) in the entire corpus.
