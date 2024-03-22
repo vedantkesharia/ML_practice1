@@ -8,6 +8,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
+
 lemmatizer = WordNetLemmatizer()
 stemmer = PorterStemmer()
 sentences = nltk.sent_tokenize(paragraph)
